@@ -5,7 +5,7 @@ This file is used to drive the builds done on the GEMOC initiative's Continuous 
 
 Basically, it provides a Jenkinsfile that allows to configure a CI to uses the forked repositories instead of the official ones.
 
-It helps prepare and validate branches suitable for creating Pull Request.
+It helps prepare and validate branches suitable for creating Pull Request as external contributor (see https://github.com/eclipse/gemoc-studio/wiki/External-contributor-memo
 
 
 # How to use
