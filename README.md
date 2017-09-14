@@ -1,9 +1,9 @@
 # gemoc-studio-jenkins
-contains the jenkins configuration to launch forked repositories.
+This repository contains the jenkins configuration file working on forked repositories.
 
 This file is used to drive the builds done on the GEMOC initiative's Continuous integration server.
 
-Basically, it provides a Jenkinsfile that allows to configure a CI to uses the forked repositories instead of the official ones.
+Basically, it provides a Jenkinsfile that allows to configure a CI to uses the forked repositories of the GEMOC initiative instead of the eclipse official ones.
 
 It helps prepare and validate branches suitable for creating Pull Request as external contributor (see https://github.com/eclipse/gemoc-studio/wiki/External-contributor-memo
 
