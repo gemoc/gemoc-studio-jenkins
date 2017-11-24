@@ -1,5 +1,6 @@
 #!groovy
 node {
+   properties([[$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '10']]]);
    catchError {
 	   def mvnHome
 	   stage('Preparation') {
