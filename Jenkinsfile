@@ -9,7 +9,7 @@ node {
 	      // this will check if there is a branch with the same name as the current branch (ie. the branch containing this Jenkinsfile) and use that for the checkout, but if there is no
 	      // branch with the same name it will fall back to the master branch
 	      dir('gemoc-studio') {
-	         def gemocstudioScm = resolveScm source: [$class: 'GitSCMSource', credentialsId: '', id: '_', remote: 'https://github.com/gemoc/gemoc-studio-eclipsefork.git', traits: [[$class: 'BranchDiscoveryTrait']]], targets: [BRANCH_NAME, 'master']
+	         def gemocstudioScm = resolveScm source: [$class: 'GitSCMSource', credentialsId: '', id: '_', remote: 'https://github.com/gemoc/gemoc-studio-eclipsefork.git', traits: [[$class: 'BranchDiscoveryTrait']]], targets: [BRANCH_NAME, 'behavioral-itf-on-dsl']
 	         checkout gemocstudioScm
 	      }
 	      dir('gemoc-studio-modeldebugging') {
