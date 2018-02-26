@@ -17,14 +17,6 @@ node {
 	         def gemocstudiomodeldebuggingScm = resolveScm source: [$class: 'GitSCMSource', credentialsId: '', id: '_', remote: 'https://github.com/gemoc/gemoc-studio-modeldebugging-eclipsefork.git', traits: [[$class: 'BranchDiscoveryTrait']]], targets: [BRANCH_NAME, 'master']
 	         checkout gemocstudiomodeldebuggingScm
 	      }
-	      dir('gemoc-studio-concurrency') {
-	         def gemocstudioconcurrencyScm = resolveScm source: [$class: 'GitSCMSource', credentialsId: '', id: '_', remote: 'https://github.com/gemoc/concurrency.git', traits: [[$class: 'BranchDiscoveryTrait']]], targets: [BRANCH_NAME, 'master']
-	         checkout gemocstudioconcurrencyScm
-	      }
-	      dir('gemoc-studio-coordination') {
-	         def gemocstudiocoordinationScm = resolveScm source: [$class: 'GitSCMSource', credentialsId: '', id: '_', remote: 'https://github.com/gemoc/coordination.git', traits: [[$class: 'BranchDiscoveryTrait']]], targets: [BRANCH_NAME, 'master']
-	         checkout gemocstudiocoordinationScm
-	      }
 	      echo 'Content of the workspace'
 	      sh "ls"
 	      // Get the Maven tool.
@@ -52,7 +44,7 @@ node {
 	   }	   
 	   stage('Deployment') {
 	      junit '**/target/surefire-reports/TEST-*.xml'
-	      archiveArtifacts '**/target/products/*.zip,**/gemoc-studio/gemoc_studio/releng/org.eclipse.gemoc.gemoc_studio.updatesite/target/repository/**'
+	      archiveArtifacts '**/target/products/*.zip,**/target/repository/**'
 	   }
    }
    step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: '', sendToIndividuals: true])
