@@ -27,6 +27,7 @@ node {
 	      }
 	      echo 'Content of the workspace'
 	      sh "ls"
+	      sh "./showGitBranches.sh ."
 	      // Get the Maven tool.
 	      // ** NOTE: This 'apache-maven-latest' Maven tool must be configured in the global configuration.
 	      // in order to find existing tools and their name, use the snippet generator available in the target jenkins instance (ie.  "Pipeline Syntax" link on the job)         
