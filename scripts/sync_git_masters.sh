@@ -1,4 +1,4 @@
-#!/bin/bash -x -e
+#!/bin/bash -xe
 
 # this script will sync changes in github.com/eclipse/gemoc-studio#master  to github.com/gemoc/gemoc-studio-eclipsefork#master
 
