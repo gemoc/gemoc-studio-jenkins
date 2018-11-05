@@ -4,13 +4,15 @@
 
 # parameters: <upstream owner> <upstream repo> <fork owner> <fork repo>
 function sync_github_repo_masters {
-	echo ################
-	echo #### merge changes of $1/$2 to $3/$4
-	echo ################
+	echo "################"
+	echo "#### merge changes of $1/$2 to $3/$4"
+	echo "################"
 
 	git clone git@github.com:$3/$4.git
 	cd $4
 
+	git config --global push.default simple
+	
 	git remote -v
 	git remote add upstream https://github.com/$1/$2.git
 	git remote -v
