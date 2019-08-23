@@ -21,6 +21,14 @@ node {
 	         def gemocstudioexecutionaleScm = resolveScm source: [$class: 'GitSCMSource', credentialsId: '', id: '_', remote: 'https://github.com/gemoc/gemoc-studio-execution-ale-eclipsefork.git', traits: [[$class: 'BranchDiscoveryTrait']]], targets: [BRANCH_NAME, 'master']
 	         checkout gemocstudioexecutionaleScm
 	      }
+	      dir('gemoc-studio-execution-moccml') {
+	         def gemocstudioexecutionmoccmlScm = resolveScm source: [$class: 'GitSCMSource', credentialsId: '', id: '_', remote: 'https://github.com/gemoc/gemoc-studio-execution-moccml-eclipsefork.git', traits: [[$class: 'BranchDiscoveryTrait']]], targets: [BRANCH_NAME, 'master']
+	         checkout gemocstudioexecutionmoccmlScm
+	      }
+	      dir('gemoc-studio-moccml') {
+	         def gemocstudiomoccmlScm = resolveScm source: [$class: 'GitSCMSource', credentialsId: '', id: '_', remote: 'https://github.com/gemoc/gemoc-studio-moccml-eclipsefork.git', traits: [[$class: 'BranchDiscoveryTrait']]], targets: [BRANCH_NAME, 'master']
+	         checkout gemocstudiomoccmlScm
+	      }
 	      echo 'Content of the workspace'
 	      sh "ls"
 	      // Get the Maven tool.
