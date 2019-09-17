@@ -8,6 +8,8 @@ function sync_github_repo_masters {
 	echo "#### merge changes of $1/$2 to $3/$4"
 	echo "################"
 
+	rm -rf $4
+	
 	git clone git@github.com:$3/$4.git
 	cd $4
 
