@@ -32,3 +32,9 @@ sync_github_repo_masters eclipse gemoc-studio gemoc gemoc-studio-eclipsefork
 sync_github_repo_masters eclipse gemoc-studio-modeldebugging gemoc gemoc-studio-modeldebugging-eclipsefork
 
 sync_github_repo_masters eclipse gemoc-studio-execution-ale gemoc gemoc-studio-execution-ale-eclipsefork
+
+sync_github_repo_masters eclipse gemoc-studio-execution-java gemoc gemoc-studio-execution-java
+
+sync_github_repo_masters eclipse gemoc-studio-moccml gemoc gemoc-studio-moccml
+
+sync_github_repo_masters eclipse gemoc-studio-execution-moccml gemoc gemoc-studio-execution-moccml
